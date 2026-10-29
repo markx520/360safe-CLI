@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "360safe-cli"
+version = "1.0.0"
+description = "Qihoo 360 Total Security (360安全卫士) Command-Line Interface and Automation Toolkit"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "markx520" }
+]
+keywords = ["360", "360safe", "qihoo360", "security", "cli", "windows", "automation", "quarantine", "antivirus"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Win32 (MS Windows)",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Security",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "psutil>=5.8.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/markx520/360safe-CLI"
+Repository = "https://github.com/markx520/360safe-CLI.git"
+Issues = "https://github.com/markx520/360safe-CLI/issues"
+
+[project.scripts]
+360 = "qihoo360_cli.cli:main"
+360-cli = "qihoo360_cli.cli:main"
+360safe-cli = "qihoo360_cli.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
